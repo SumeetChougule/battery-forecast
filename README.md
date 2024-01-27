@@ -55,3 +55,22 @@ Project Organization
 --------
 
 <p><small>Project based on the <a target="_blank" href="https://drivendata.github.io/cookiecutter-data-science/">cookiecutter data science project template</a>. #cookiecutterdatascience</small></p>
+
+
+### dagshub
+[dagshub](https://dagshub.com/)
+
+MLFLOW_TRACKING_URI=https://dagshub.com/SumeetChougule/battery-forecasting.mlflow \
+MLFLOW_TRACKING_USERNAME=SumeetChougule \
+MLFLOW_TRACKING_PASSWORD=90cd3850e33bbd72900418c750f9caa930f0deda \
+python script.py
+
+```bash
+
+export MLFLOW_TRACKING_URI=https://dagshub.com/SumeetChougule/battery-forecasting.mlflow
+
+export MLFLOW_TRACKING_USERNAME=SumeetChougule
+
+export MLFLOW_TRACKING_PASSWORD=90cd3850e33bbd72900418c750f9caa930f0deda
+
+```

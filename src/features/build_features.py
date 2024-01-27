@@ -43,6 +43,17 @@ val_df = val_df[column_list]
 
 val_df = val_df.ffill().bfill()
 
+# Adding lagged values to val
+
+last_known_op = train_df["battery_output"].iloc[-1]
+val_df.loc[val_df.index[0], "battery_output_lag1"] = last_known_op
+val_df.loc[val_df.index[0:2], "battery_output_lag2"] = train_df["battery_output"][
+    -2:
+].values
+val_df.loc[val_df.index[0:48], "battery_output_lag48"] = train_df["battery_output"][
+    -48:
+].values
+
 # To csv
 
 train_df.to_csv("../../data/interim/data.csv", index=False)

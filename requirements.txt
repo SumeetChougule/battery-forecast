@@ -26,3 +26,13 @@ dill
 seaborn
 sktime
 Prophet
+
+mlflow
+
+python-box
+pyYAML
+tqdm
+ensure
+joblib
+types-pyYAML
+Flask-Cors

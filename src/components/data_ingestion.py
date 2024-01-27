@@ -12,6 +12,10 @@ from src.components.data_transformation import (
     DataTransformationConfig,
 )
 
+from src.components.model_trainer import ModelTrainer, ModelTrainerConfig
+from src.components.model_evaluation import ModelEvaluation
+from src.pipeline.prediction import PredictionPipeline
+
 
 @dataclass
 class DataIngestionConfig:
@@ -66,3 +70,12 @@ if __name__ == "__main__":
     (X_train, X_test, y_train, y_test, val) = trans_obj.data_transformation(
         train_path=train_data, test_path=test_data, val_path=val_data
     )
+
+    train_obj = ModelTrainer()
+    print(train_obj.initiate_model_trainer(X_train, X_test, y_train, y_test))
+
+    eval_obj = ModelEvaluation()
+    eval_obj.log_into_mlflow(X_test=X_test, y_test=y_test)
+
+    pred = PredictionPipeline()
+    prediction = pred.predict(data=val)
