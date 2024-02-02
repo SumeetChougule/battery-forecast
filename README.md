@@ -36,7 +36,7 @@ Deployment: Integrates the forecasting models into energy management systems and
 Clone the repository
 
 ```bash
-https://github.com/SumeetChougule/battery-forecast.git
+git clone https://github.com/SumeetChougule/battery-forecast.git
 ```
 ### STEP 01- Create a conda environment after opening the repository
 
