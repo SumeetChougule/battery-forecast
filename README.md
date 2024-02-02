@@ -11,29 +11,62 @@ The primary objective of Battery Forecasting is to develop accurate and reliable
 
 ## Features
 
-    Time Series Analysis: Utilizes advanced time series analysis techniques to model battery charging and discharging patterns over time.
-    
-    Machine Learning Model: Employed XGBRegressor, to predict battery behavior based on historical data and relevant features.
-    
-    Exogenous Variables: Considers exogenous variables such as weather conditions, electricity demand, and grid load to improve the accuracy of battery forecasts.
-    
-    Grid Optimization: Supports grid optimization efforts by providing timely and accurate predictions of battery usage, aiding in load balancing and grid stability.
+Time Series Analysis: Utilizes advanced time series analysis techniques to model battery charging and discharging patterns over time.
+
+Machine Learning Model: Employed XGBRegressor, to predict battery behavior based on historical data and relevant features.
+
+Exogenous Variables: Considers exogenous variables such as weather conditions, electricity demand, and grid load to improve the accuracy of battery forecasts.
+
+Grid Optimization: Supports grid optimization efforts by providing timely and accurate predictions of battery usage, aiding in load balancing and grid stability.
 
 ## Components
 
-    Data Ingestion: Collects and preprocesses historical data on battery usage, weather conditions, electricity demand, and other relevant variables.
-    
-    Model Training: Trains machine learning models using historical data to forecast battery behavior.
-    
-    Evaluation: Assesses the performance of trained models using appropriate evaluation metrics and techniques.
-    
-    Deployment: Integrates the forecasting models into energy management systems and grid infrastructure for real-time decision-making.
+Data Ingestion: Collects and preprocesses historical data on battery usage, weather conditions, electricity demand, and other relevant variables.
+
+Model Training: Trains machine learning models using historical data to forecast battery behavior.
+
+Evaluation: Assesses the performance of trained models using appropriate evaluation metrics and techniques.
+
+Deployment: Integrates the forecasting models into energy management systems and grid infrastructure for real-time decision-making.
 
 
 # How to run?
 ### STEPS:
 
-<p><small>Project based on the <a target="_blank" href="https://drivendata.github.io/cookiecutter-data-science/">cookiecutter data science project template</a>. #cookiecutterdatascience</small></p>
+Clone the repository
+
+```bash
+https://github.com/SumeetChougule/battery-forecast.git
+```
+### STEP 01- Create a conda environment after opening the repository
+
+```bash
+conda create -n BF python=3.11 -y
+```
+
+```bash
+conda activate BF
+```
+
+
+### STEP 02- install the requirements
+```bash
+pip install -r requirements.txt
+```
+
+
+```bash
+# Finally run the following command
+python main.py
+```
+
+
+
+
+## MLflow
+
+[Documentation](https://mlflow.org/docs/latest/index.html)
+
 
 
 ### dagshub
